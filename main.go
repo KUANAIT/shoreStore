@@ -56,7 +56,6 @@ func updateShoeByID(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Get the ID from the URL query parameters
 	id := r.URL.Query().Get("id")
 	if id == "" {
 		http.Error(w, "ID is required.", http.StatusBadRequest)
